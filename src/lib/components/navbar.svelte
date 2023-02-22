@@ -7,7 +7,16 @@
 	import { adminMenu, type TabDefinition } from './navigation.tabs';
 	import SettingMenu from './setting.menus.svelte';
 	import Tabs from './tabs.svelte';
+	import { afterUpdate, onMount } from 'svelte';
+	import { page } from '$app/stores';
 	let activeTab = '';
+	onMount(() => {
+    activeTab = $page.url.pathname;
+  });
+
+  afterUpdate(() => {
+    activeTab = $page.url.pathname;
+  });
 	const adminTabs: TabDefinition[] = adminMenu();
 	function drawerLeftOpen(): void {
 		const settings: DrawerSettings = {
@@ -100,8 +109,8 @@
 				{#each adminTabs as t}
 				<a
 				href={t.path}
-				class="hover:bg-[#6c3dc2] hover:text-base-100 px-3 py-2 hover:no-underline no-underline rounded-md text-md font-medium {activeTab == t.path
-				  ? 'active: bg-primary-500 text-base-100' : 'text-base-100'}">{t.name}</a>
+				class="hover:bg-surface-700  hover:text-base-100 px-3 py-2 hover:no-underline text-start pl-3 no-underline rounded-md text-md font-medium {activeTab == t.path
+				  ? 'active: bg-surface-800 text-' : 'text-base-100'}">{t.name}</a>
 			  {/each}
 			</ul>
 		{:else}

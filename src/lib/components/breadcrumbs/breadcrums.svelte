@@ -22,7 +22,7 @@
     {#if i < crumbs.length - 1}
       <li class="crumb"><a href={crumb.link}>{crumb.label}</a></li>
       <li class="crumb-separator" aria-hidden>
-        <Fa icon={faAngleRight} size = 'sm' color="text-red-500" />
+        <Fa icon={faAngleRight} size = 'md' class='text-primary-500 font-bold'/>
       </li>
     {:else}
       <li class="crumb">{crumb.label}</li>

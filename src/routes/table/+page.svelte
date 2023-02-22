@@ -71,8 +71,8 @@
 		placeholder="Search..."
 	/>
 
-	<div class="h-[700px] bg-tertiary-500">
-		<div class="table-container h-[700px]">
+	<div class="h-[650px] bg-tertiary-500">
+		<div class="table-container h-[650px]">
 			<table class="table table-hover w-full">
 				<thead style="position: sticky ;" class="">
 					<tr class="sticky top-0">

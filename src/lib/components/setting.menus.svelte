@@ -7,8 +7,6 @@
 	const gotoLogout = async () => {
 		dispatch('logout');
 	};
-
-	// NOTE: the element that is using one of the theme attributes must be in the DOM on mount
 </script>
 
 <div class="flex flex-col h-screen ">
@@ -48,7 +46,6 @@
 			<h3 class="mx-2 text-[22px] font-medium text-primary-500 dark:text-primary-500">John Doe</h3>
 			<span class="pl-3 text-xs text-primary-500">user@gmail.com</span>
 			<p class="pl-3 text-xs text-primary-500">UserId:12345</p>
-			<!-- <p class="pl-3 text-xs text-primary-500">OrganisationId:12345</p> -->
 			<div class="flex gap-2 pl-3 mr-2 text-xs pt-3">
 				<span><a href="" class="text-primary-500">My Accounts</a></span>
 				<span><a href="" class="text-primary-500">My Portals</a></span>
@@ -67,17 +64,11 @@
         <label class="label cursor-pointer pl-3 mb-3">
           <div class="flex gap-2">
             <div class="text-primary-500 dark:text-primary-700 font-semibold mt-1 mr-4 pl-3">Themes</div>
-            <!-- <div class="flex gap-5 justify-center pl-6  items-center"> -->
               <LightSwitch height="h-20" fillLight='fill-primary-500' ring='ring-4px ring-primary-500' position="right" />
-            <!-- </div> -->
           </div>
         </label>
       </div>
 			<hr class=" border-gray-200 dark:border-gray-600" />
-			<!-- <div class="mt-3">
-				<span class="label text-[16px] mt-1 mr-4 pl-3">Theme</span>
-				<LightSwitch class = "bg-primary-500" position="left" />
-			</div> -->
 			<!-- svelte-ignore a11y-label-has-associated-control -->
 			<label class="label cursor-pointer pl-3">
 				<div class="flex flex-col">

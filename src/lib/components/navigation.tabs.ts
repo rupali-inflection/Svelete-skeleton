@@ -10,19 +10,15 @@ const home: TabDefinition = {
     path: `/`,
     default: true,
 };
-// const moderatorHome: TabDefinition = {
-//     name: 'Home',
-//     path: `/users/userId/home/moderators`,
-//     default: true,
-// };
+
 const notification: TabDefinition = {
     name: 'Notifications',
-    path: `/table`,
+    path: `/notifications`,
     default: false,
 };
 const apiClients: TabDefinition = {
     name: 'Clients',
-    path: `/users/userId/api-clients`,
+    path: `/table`,
     default: false,
 };
 const organization: TabDefinition = {
@@ -40,18 +36,7 @@ const newsFeeds: TabDefinition = {
     path: `/users/userId/newsfeed`,
     default: false,
 };
-
-// export const moderatorMenu = (userId) => {
-//     const menus = [
-//         notification,
-//         organization,
-//         knowledegeNuggets,
-//         enrollments,
-//     ];
-//     return replaceUserId(menus, userId);
-// };
-
-export const adminMenu = () => {
+export const navbarMenu = () => {
     const menus = [
             home,
             apiClients,
@@ -59,6 +44,15 @@ export const adminMenu = () => {
             organization,
             linkages,
             newsFeeds
+    ];
+    return replaceUserId(menus);
+};
+
+export const sidebarMenu = (userId) => {
+    const menus = [
+        notification,
+        organization,
+
     ];
     return replaceUserId(menus);
 };
